@@ -1,22 +1,21 @@
-import { PropsWithChildren } from 'react';
+import { ImgHTMLAttributes, PropsWithChildren } from 'react';
 import * as stylex from '@stylexjs/stylex';
-import { colors, fonts, radii } from '../../design-system/tokens.stylex.ts';
+import { colors, fonts, radii } from '../tokens.stylex.ts';
 
 const styles = stylex.create({
   card: {
     backgroundColor: colors.bgItem,
     borderRadius: radii.borderRadiusLg,
-    height: '497px',
-    padding: '16px',
-    paddingBottom: '32px',
+    fontSize: fonts.fontSizeMd,
+    padding: '1em',
+    paddingBottom: '2em',
     textAlign: 'center',
-    width: '320px',
+    width: '20em',
   },
 
   cardImage: {
     borderRadius: radii.borderRadiusMd,
-    marginBottom: '12px',
-    objectFit: 'contain',
+    maxWidth: '288px',
     width: '100%',
   },
 
@@ -24,8 +23,9 @@ const styles = stylex.create({
     color: colors.primaryText,
     fontSize: fonts.fontSizeLg,
     fontWeight: fonts.fontWeightBold,
-    marginBottom: '14px',
+    margin: '1em 0 1em 0',
   },
+
   cardDescription: {
     color: colors.subtleText,
     fontSize: fonts.fontSizeSm,
@@ -37,8 +37,8 @@ export function Card(props: PropsWithChildren) {
   return <div {...stylex.props(styles.card)}>{props.children}</div>;
 }
 
-function CardImage(props: { src: string; alt: string }) {
-  return <img src={props.src} alt={props.alt} {...stylex.props(styles.cardImage)} />;
+function CardImage(props: ImgHTMLAttributes<HTMLImageElement>) {
+  return <img {...props} alt={props.alt} {...stylex.props(styles.cardImage)} />;
 }
 
 function CardTitle(props: PropsWithChildren) {
