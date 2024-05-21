@@ -10,10 +10,46 @@
 }
 
 :root {
-  background-color: #d5e1ef;
+  /*    color tokens start   */
+  --bg: #d5e1ef;
+  --bgItem: #fefffe;
+  --primaryText: #1f314f;
+  --subtleText: #7d889e;
+  /*    font tokens start    */
+  --fontFamily: 'Poppins', sans-serif;
+  --fontSizeXs: 0.75rem;
+  --fontSizeSm: 0.875rem;
+  --fontSizeMd: 1rem;
+  --fontSizeLg: 1.125rem;
+  --fontSizeXl: 1.25rem;
+  --fontStyleItalic: italic;
+  --fontStyleNormal: normal;
+  --fontWeightLight: 300;
+  --fontWeightRegular: 400;
+  --fontWeightMedium: 500;
+  --fontWeightBold: 700;
+  --lineHeight: 1.5;
+  /*    radii tokens start    */
+  --borderRadiusMd: 10px;
+  --borderRadiusLg: 20px;
+}
+
+html {
+  background-color: var(--bg);
+}
+
+html,
+body,
+#root,
+main {
+  height: 100%;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
+  color: var(--primaryText);
+  font-family: var(--fontFamily), sans-serif;
+  font-size: var(--fontSizeMd);
+  font-style: var(--fontStyleNormal);
+  font-weight: var(--fontWeightRegular);
+  line-height: var(--lineHeight);
 }

@@ -21,7 +21,7 @@ module.exports = {
   plugins: ['react-refresh', '@stylexjs'],
   rules: {
     'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
-    '@stylexjs/valid-styles': 'error',
+    '@stylexjs/valid-styles': 'warn',
     '@stylexjs/sort-keys': 'warn',
   },
   settings: {

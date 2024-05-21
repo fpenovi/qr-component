@@ -7,7 +7,6 @@ const styles = stylex.create({
     alignItems: 'center',
     backgroundColor: colors.bg,
     display: 'flex',
-    height: '100svh',
     justifyContent: 'center',
   },
 });
